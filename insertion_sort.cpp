@@ -39,19 +39,14 @@ void improve_insertion_sort(T arr[],int n){
 				break;
 		}
 		arr[j]=element;
-	
 	}
 }
 
-
 int main(){
-	int *arr1=TestSortHelper::generateRandomArray(10,0,10);
-	int *arr2=TestSortHelper::generateRandomArray(10,10,100);
-	// int arr[]={1,3,5,7,9,2,4,6,8,0};
-
-	improve_insertion_sort(arr2,10);
-	// cout<<"------the division line----------"<<endl;
-	TestSortHelper::printArray(arr2,10);
+	int *arr1=TestSortHelper::generateRandomArray(100,0,1000);
+	int *arr2=TestSortHelper::generateRandomArray(100,10,1500);
+	TestSortHelper::testSort("selection_sort",selection_sort,arr1,100);
+	TestSortHelper::testSort("improve_insertion_sort",improve_insertion_sort,arr2,100);
 	return 0;
 
 }
