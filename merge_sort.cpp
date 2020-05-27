@@ -28,7 +28,8 @@ void merge_sort(int arr[],int start,int end){
 		int mid=(start+end)/2;
 		merge_sort(arr,start,mid);
 		merge_sort(arr,mid+1,end);
-		merge(arr,start,mid,end);
+		if(arr[mid]>arr[mid+1])
+			merge(arr,start,mid,end);
 	}
 	
 		
